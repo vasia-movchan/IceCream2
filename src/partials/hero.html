@@ -1,0 +1,85 @@
+<!-- Герой -->
+
+<section class="hero">
+    <div class="container hero__container">
+        <div class="hero__content-div">
+            <div class="hero__titleDiv">
+                <h1 class="hero__title z10">
+                    Ice cream <br />made with <span class="hero__title--secondary">passion</span>
+                </h1>
+                <div class="hero__btnDiv z10">
+                    <a class="btn hero__btn hero__btn--pink link" href="#products">Products</a>
+                    <a class="btn hero__btn hero__btn--white link" href="#how-its-made">How it’s made?</a>
+                </div>
+            </div>
+
+            <ul class="hero__sidebar list">
+                <li class="hero__sidebarItem">
+                    <div class="hero__sidebarNumber z5">16</div>
+                    <div class="hero__descriptionText hero__sidebarText">cafes</div>
+                    <div class="hero__sidebarCircle z1"></div>
+                </li>
+                <li class="hero__sidebarItem">
+                    <div class="hero__sidebarNumber z5">23</div>
+                    <div class="hero__descriptionText hero__sidebarText">food trucks</div>
+                    <div class="hero__sidebarCircle z1"></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hero__milkDiv">
+            <picture class="hero__image--milk z5">
+                <source media="(min-width: 1200px)" type="image/png"
+                    srcset="./images/hero/slider-pic5-dt.png 1x, ./images/hero/slider-pic5-dt@2x.png 2x" />
+                <source media="(min-width: 768px)" type="image/png"
+                    srcset="./images/hero/slider-pic5-tb.png 1x, ./images/hero/slider-pic5-tb@2x.png 2x" />
+                <img src="./images/hero/slider-pic5-tb.png" alt="Milk" />
+            </picture>
+
+            <div class="hero__desriptionDiv">
+                <p class="hero__descriptionText">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    ut labore et
+                </p>
+
+                <button type="button" class="btn roundBtn" data-modal>
+                    <svg class="roundBtn__icon">
+                        <use href="./images/sprite.svg#icon-arrow-right2" width="8" height="8"></use>
+                    </svg>
+                    <svg class="roundBtn__icon--tab">
+                      <use href="./images/sprite.svg#icon-arrow-right2" width="5" height="5"></use>
+                    </svg>
+                </button>
+                <div class="roundBtn__window" data-modal>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos non, eveniet</p>
+                    <button class="roundBtn__window-button-close" type="button">
+                        <svg class="roundBtn__window-icon">
+                            <use href="./images/sprite.svg#about-icon_close"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <picture class="hero__image--tasty z5">
+            <source media="(min-width: 1200px)" type="image/png"
+                srcset="./images/hero/slider-pic4-dt.png 1x, ./images/hero/slider-pic4-dt@2x.png 2x" />
+            <source media="(min-width: 768px)" type="image/png"
+                srcset="./images/hero/slider-pic4-tb.png 1x, ./images/hero/slider-pic4-tb@2x.png 2x" />
+            <img src="./images/hero/slider-pic4-tb.png" alt="So tasty" />
+        </picture>
+
+        <div class="hero__bgCircle--icecream z1">
+            <picture class="hero__image--icecream z5">
+                <source media="(min-width: 1200px)" type="image/png"
+                    srcset="./images/hero/slider-pic7-dt.png 1x, ./images/hero/slider-pic7-dt@2x.png 2x" />
+                <source media="(min-width: 768px)" type="image/png"
+                    srcset="./images/hero/slider-pic7-tb.png 1x, ./images/hero/slider-pic7-tb@2x.png 2x" />
+                <source media="(min-width: 320px)" type="image/png"
+                    srcset="./images/hero/slider-pic7-mb.png 1x, ./images/hero/slider-pic7-mb@2x.png 2x" />
+                <img src="./images/hero/slider-pic7-mb.png" alt="Ice cream" />
+            </picture>
+        </div>
+    </div>
+    <div class="overlay js-overlay-modal"></div>
+</section>

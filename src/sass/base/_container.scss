@@ -1,0 +1,20 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 480px) {
+    min-width: 320px;
+  }
+
+  @include tel {
+    max-width: 480px;
+  }
+
+  @include tab {
+    max-width: 768px;
+  }
+
+  @include desk {
+    max-width: 1200px;
+  }
+}

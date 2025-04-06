@@ -1,0 +1,23 @@
+.gallery-section {
+  margin: 0 auto;
+  background-image: linear-gradient(to bottom, var(--sectionBgColor) 48px, var(--white) 48px);
+
+  @include tab {
+    padding-bottom: 121px;
+    min-height: 264px;
+    background-image: linear-gradient(to bottom, var(--sectionBgColor) 106px, var(--white) 106px);
+  }
+
+  @include desk {
+    padding-bottom: 123px;
+    min-height: 430px;
+    background-image: linear-gradient(to bottom, var(--sectionBgColor) 161px, var(--white) 161px);
+  }
+}
+
+.gallery-section__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

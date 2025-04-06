@@ -1,0 +1,387 @@
+.hero {
+  background-color: var(--mainBackground);
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 193px;
+    height: 502px;
+  }
+
+  @include tab {
+    padding-top: 102px;
+    height: 399px;
+  }
+
+  @include desk {
+    height: 665px;
+    padding-top: 171px;
+  }
+}
+
+.hero__container {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+
+  @include tab {
+    padding-left: 34px;
+    padding-right: 34px;
+    position: relative;
+  }
+
+  @include desk {
+    padding-left: 37px;
+    padding-right: 57px;
+  }
+}
+
+.hero__titleDiv {
+  @include desk {
+    padding-left: 38px;
+  }
+}
+
+.hero__bgCircle--icecream {
+  background-color: var(--secondaryBackground);
+  border-radius: 50%;
+
+  position: absolute;
+  width: 346px;
+  height: 344px;
+
+  @media screen and (max-width: 767px) {
+    left: 36px;
+    top: 83px;
+  }
+
+  @include tab {
+    right: 137px;
+    bottom: 46px;
+    width: 324px;
+    height: 322px;
+  }
+
+  @include desk {
+    width: 538px;
+    height: 538px;
+    bottom: 75px;
+    right: 227px;
+  }
+
+  @include animationBottom;
+}
+
+.hero__image--icecream {
+  object-fit: cover;
+  position: absolute;
+  display: block;
+
+  @media screen and (max-width: 767px) {
+    width: 171px;
+    height: 410px;
+    right: 88px;
+    top: 9px;
+  }
+
+  @include tab {
+    width: 143px;
+    height: 336px;
+    top: 32px;
+    left: 71px;
+  }
+
+  @include desk {
+    width: 236px;
+    height: 557px;
+    top: 56px;
+    left: 119px;
+  }
+}
+
+.hero__btn {
+  height: 24px;
+  font-size: 8px;
+  margin-right: 8px;
+  border-radius: 20px;
+  font-family: var(--mainText);
+
+  @include buttonHover;
+
+  @include desk {
+    height: 40px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--pink {
+    width: 62.4px;
+    background-color: var(--accentColor);
+    color: var(--white);
+
+    @include desk {
+      width: 104px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--accentHover);
+    }
+  }
+  &--white {
+    width: 82.8px;
+    background-color: var(--white);
+    color: var(--accentColor);
+    @include desk {
+      width: 138px;
+    }
+    &:hover,
+    &:focus {
+      background-color: var(--whiteHover);
+    }
+  }
+}
+
+.roundBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+
+  fill: var(--contactRedBtnColor);
+  background-color: var(--white);
+
+  @include desk {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.roundBtn__icon {
+  position: absolute;
+  display: none;
+  width: 8px;
+  height: 8px;
+  @include desk {
+    display: flex;
+  }
+}
+
+.roundBtn__icon--tab {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+
+  @include desk {
+    display: none;
+  }
+}
+
+.roundBtn:hover,
+.roundBtn:focus {
+  background-color: var(--contactRedBtnColor);
+  fill: var(--white);
+}
+
+.hero__title {
+  position: relative;
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 19px;
+  color: var(--white);
+  font-family: var(--titleFont);
+
+  @include tab {
+    font-size: 22px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+
+  @include desk {
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 25px;
+  }
+
+  &--secondary {
+    display: block;
+    font-size: 48px;
+    line-height: 46px;
+    color: var(--accentColor);
+    @include tab {
+      font-size: 34px;
+      line-height: 90.5%;
+      letter-spacing: 0.04em;
+    }
+    @include desk {
+      font-size: 58px;
+    }
+  }
+}
+
+.hero__btnDiv {
+  display: flex;
+  position: relative;
+
+  @include tab {
+    margin-bottom: 19px;
+  }
+
+  @include desk {
+    margin-bottom: 56px;
+  }
+}
+
+.hero__descriptionText {
+  width: 114px;
+  font-family: DM Sans;
+  font-size: 8px;
+  line-height: 150%;
+  color: var(--white);
+  margin-bottom: 7px;
+
+  @include desk {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 20px;
+    width: 200px;
+  }
+}
+
+.hero__image--milk {
+  display: none;
+
+  @include tab {
+    display: block;
+    width: 124px;
+    height: 126px;
+  }
+
+  @include desk {
+    width: 188px;
+    height: 191px;
+    margin-right: 30px;
+  }
+
+  @include animationLeft;
+}
+
+.hero__milkDiv {
+  display: flex;
+  position: relative;
+}
+
+.hero__desriptionDiv {
+  display: none;
+  @include tab {
+    padding-top: 40px;
+    display: block;
+  }
+}
+
+.hero__image--tasty {
+  display: none;
+  @include tab {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 34px;
+  }
+  @include desk {
+    right: 69px;
+  }
+  @include animationRight;
+}
+
+.hero__sidebar {
+  display: none;
+
+  position: relative;
+  margin-left: auto;
+
+  @include tab {
+    display: block;
+  }
+
+  @include desk {
+  }
+
+  @include animationRight;
+}
+
+.hero__content-div {
+  display: flex;
+}
+
+.hero__sidebarItem {
+  margin-bottom: 13px;
+  position: relative;
+  padding-right: 10px;
+  padding-top: 0px;
+}
+
+.hero__sidebarNumber {
+  position: relative;
+  font-family: var(--titleFont);
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--accentColor);
+  /* identical to box height */
+  text-align: right;
+  letter-spacing: 0.04em;
+
+  @include desk {
+    font-size: 46px;
+    line-height: 53px;
+    margin-bottom: 2px;
+  }
+}
+
+.hero__sidebarCircle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--white);
+
+  @include desk {
+    width: 30px;
+    height: 30px;
+    top: -5%;
+  }
+}
+
+.hero__sidebarText {
+  // position: absolute;
+  text-align: right;
+
+  @include desk {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.z1 {
+  z-index: 1;
+}
+
+.z5 {
+  z-index: 5;
+}
+
+.z10 {
+  z-index: 10;
+}

@@ -1,2 +1,27 @@
 @import './common';
 @import './example';
+
+@import './utils/vars';
+@import './utils/hidden';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+@import './base/common';
+@import './base/container';
+@import './base/reset';
+@import './base/modal';
+
+@import './components/animation';
+@import './components/btn';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/roundBtn-modal';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
+@import './layout/about-modal';

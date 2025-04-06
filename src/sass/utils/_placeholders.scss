@@ -1,0 +1,10 @@
+%centered-flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%animationSetup {
+  animation-duration: 300ms;
+  animation-timing-function: var(--cubic);
+}

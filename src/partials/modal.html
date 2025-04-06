@@ -1,0 +1,129 @@
+<!-- Модалка -->
+<div class="backdrop-buynow is-hidden-buynow" buynow-modal>
+  <div class="modal">
+    <a href="./index.html" class="link modal-logo">
+      <img src="./images/header/logo.png" alt="логотип компании" />
+    </a>
+
+    <button class="modal-delete-btn food-close modal-close-btn" buynow-modal-close>
+      <!-- <span>x</span> -->
+      <svg height="14">
+        <use href="./images/sprite.svg#about-icon_close"></use>
+      </svg>
+    </button>
+
+    <form class="form">
+      <p class="form__title">Buy it now</p>
+
+      <div class="products-title">
+        <label for="Products" class="products-to-choose__label div-item-thumb1">Products</label>
+        <label for="Price" class="products-to-choose__label div-item-thumb2">Price</label>
+        <label for="Quantity" class="products-to-choose__label div-item-thumb3">Qty</label>
+        <label for="Amount" class="products-to-choose__label div-item-thumb4">Amount</label>
+        <label for="" class="products-to-choose__label div-item-thumb5"></label>
+      </div>
+
+      <div class="products-to-choose" id="pokupki1">
+        <div class="products-to-choose-in" id="food_line_template" food-line="1">
+          <div class="div-item-thumb1" id="select-food1">
+            <select
+              id="Products"
+              name="Products"
+              class="products-to-choose__select food-selector"
+              food-line="1"
+            >
+              <optgroup label="Ice Cream" class="products-to-choose__group">
+                <option value="Ice Cream: vanilla" class="products-to-choose__item" selected>
+                  Ice Cream: vanilla
+                </option>
+                <option value="Ice Cream: chocolate" class="products-to-choose__item">
+                  Ice Cream: chocolate
+                </option>
+                <option value="Ice Cream: strawberry" class="products-to-choose__item">
+                  Ice Cream: strawberry
+                </option>
+              </optgroup>
+              <optgroup label="Ice Coffee" class="products-to-choose__group">
+                <option value="Ice Coffee: vanilla" class="products-to-choose__item">
+                  Ice Coffee: vanilla
+                </option>
+                <option value="Ice Coffee: chocolate" class="products-to-choose__item">
+                  Ice Coffee: chocolate
+                </option>
+                <option value="Ice Coffee: pistachio" class="products-to-choose__item">
+                  Ice Coffee: pistachio
+                </option>
+              </optgroup>
+              <optgroup label="MilkShakes" class="products-to-choose__group">
+                <option value="MilkShake: vanilla" class="products-to-choose__item">
+                  MilkShake: vanilla
+                </option>
+                <option value="MilkShake: chocolate" class="products-to-choose__item">
+                  MilkShake: chocolate
+                </option>
+                <option value="MilkShake: strawberry" class="products-to-choose__item">
+                  MilkShake: strawberry
+                </option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div
+            name="Price"
+            class="price-thumb div-item-thumb2 food-price"
+            food-line="1"
+            id="price1"
+          ></div>
+
+          <div class="div-item-thumb3" id="quant1">
+            <input
+              type="number"
+              id="Quantity"
+              name="Quantity"
+              min="0"
+              class="products-to-choose__select food-quantity"
+              food-line="1"
+            />
+          </div>
+
+          <div class="amount-thumb div-item-thumb4 food-amount" food-line="1" id="amount1"></div>
+
+          <div class="div-item-thumb5" id="btnclose1">
+            <button class="modal-delete-btn food-close" food-line="1">-</button>
+          </div>
+        </div>
+
+        <div class="btn-thumb div-item-thumb" id="add-button-div">
+          <button class="modal-add-btn" id="add-button">Add</button>
+        </div>
+      </div>
+
+      <div class="total-thumb">
+        <label for="" class="products-to-choose__label products-to-choose__label-total-amount"
+          >Total Amount:</label
+        >
+        <div class="total-amount-thumb food-total-amount"></div>
+      </div>
+
+      <div class="buynow-contacts-details">
+        <div class="form__field">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" name="name" id="name" class="form__input" />
+          <svg width="18" height="18" class="form__icon">
+            <use href="./images/sprite.svg#icon-personblack"></use>
+          </svg>
+        </div>
+
+        <div class="form__field">
+          <label for="tel" class="form-label">Phone</label>
+          <input type="text" name="tel" id="tel" class="form__input" />
+          <svg width="18" height="18" class="form__icon">
+            <use href="./images/sprite.svg#icon-phoneblack"></use>
+          </svg>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-buynow">Order</button>
+    </form>
+  </div>
+</div>

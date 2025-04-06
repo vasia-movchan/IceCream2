@@ -1,0 +1,423 @@
+.products-container {
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media screen and (max-width: 767px) {
+    width: 320px;
+  }
+
+  @include tab {
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+
+  @include desk {
+    padding-right: 77px;
+    padding-left: 77px;
+  }
+}
+
+.products {
+  overflow: hidden;
+  padding-top: 121px;
+  padding-bottom: 98px;
+
+  @include tab {
+    padding-bottom: 112px;
+  }
+
+  @include desk {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
+}
+
+.products__title {
+  font-family: var(--titleFont);
+  @include font(18px, 1.16, center);
+  text-transform: uppercase;
+  color: var(--secondaryBackground);
+  margin-bottom: 15px;
+  @extend %centered-flex-box;
+
+  @include tab {
+    @include font(26px, 1.15, null);
+  }
+
+  @include desk {
+    @include font(30px, 1.13, null);
+  }
+}
+
+.products__subtitle {
+  font-family: var(--titleFont);
+  @include font(34px, 1.14, center);
+  text-transform: uppercase;
+  color: var(--accentColor);
+  margin-bottom: 144px;
+
+  @include tab {
+    @include font(48px, 1.15, null);
+    margin-bottom: 150px;
+  }
+
+  @include desk {
+    @include font(58px, 1.14, null);
+    margin-bottom: 259px;
+  }
+}
+
+.products__list {
+  display: grid;
+  gap: 130px;
+
+  @include tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    gap: 0;
+  }
+}
+
+.products__item {
+  position: relative;
+  border-radius: 24px;
+  color: var(--white);
+  @extend %centered-flex-box;
+  flex-direction: column;
+  padding: 161px 40px 41px;
+
+  @include tab {
+    margin-bottom: 0;
+    padding: 152px 11px 40px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @include desk {
+    padding: 163px 45px 50px;
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}
+
+.products__item--one {
+  background-color: var(--mainBackground);
+}
+.products__item--two {
+  background-color: var(--contactCafeColor);
+}
+
+.products__item--three {
+  background-color: var(--contactCafeFoodtruck);
+}
+
+.products__item--one::before {
+  content: '';
+  @include fonpicsz(249px, 252px);
+  @include fonpic(no-repeat, contain, center, absolute, block, 1);
+  background-image: url(../images/products/icecream-mob.png);
+  top: -113px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/products/icecream-mob-2x.png);
+  }
+  @include tab {
+    @include fonpicsz(100%, 224px);
+    background-image: url(../images/products/icecream-tab.png);
+    top: -104px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/icecream-tab-2x.png);
+    }
+  }
+
+  @include desk {
+    @include fonpicsz(335px, 335px);
+    background-image: url(../images/products/icecream-desk.png);
+    top: -210px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/icecream-desk-2x.png);
+    }
+  }
+}
+
+.products__item--two::before {
+  content: '';
+  @include fonpicsz(249px, 252px);
+  @include fonpic(no-repeat, contain, center, absolute, block, 1);
+  background-image: url(../images/products/icecoffee-mob.png);
+  top: -113px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/products/icecoffee-mob-2x.png);
+  }
+  @include tab {
+    @include fonpicsz(100%, 224px);
+    top: -111px;
+    background-image: url(../images/products/icecoffee-tab.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/icecoffee-tab-2x.png);
+    }
+  }
+
+  @include desk {
+    @include fonpicsz(335px, 335px);
+    top: -210px;
+    background-image: url(../images/products/icecoffee-desk.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/icecoffee-desk-2x.png);
+    }
+  }
+}
+
+.products__item--three::before {
+  content: '';
+  @include fonpicsz(249px, 252px);
+  background-image: url(../images/products/milkshake-mob.png);
+  @include fonpic(no-repeat, contain, center, absolute, block, 1);
+  top: -113px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/products/milkshake-mob-2x.png);
+  }
+  @include tab {
+    @include fonpicsz(100%, 224px);
+    top: -102px;
+    background-image: url(../images/products/milkshake-tab.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/milkshake-tab-2x.png);
+    }
+  }
+
+  @include desk {
+    @include fonpicsz(335px, 335px);
+    top: -210px;
+    background-image: url(../images/products/milkshake-desk.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/milkshake-desk-2x.png);
+    }
+  }
+}
+
+.card__title {
+  font-family: var(--titleFont);
+  font-weight: normal;
+  @include font(20px, 1.15, center);
+  text-transform: uppercase;
+  // padding-top: 161px;
+  margin-bottom: 36px;
+
+  // @include tab {
+  //   padding-top: 152px;
+  // }
+
+  @include desk {
+    // padding-top: 163px;
+    @include font(30px, 1.13, null);
+    // padding-bottom: 38px;
+    margin-bottom: 38px;
+  }
+}
+
+.card__title::after {
+  content: '...';
+  width: 26px;
+  height: 6px;
+  color: var(--white);
+  position: absolute;
+  left: 127px;
+  top: 200px;
+
+  @include tab {
+    left: 97px;
+    top: 191px;
+  }
+
+  @include desk {
+    left: 151px;
+    top: 205px;
+  }
+}
+
+.card__text {
+  font-weight: bold;
+  @include font(14px, 1.7, center);
+  color: var(--white);
+  // padding-top: 30px;
+  // padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @include tab {
+    @include font(null, 1.8, null);
+    // padding: 30px 11px 40px;
+    margin-bottom: 40px;
+  }
+
+  @include desk {
+    @include font(16px, 1.75, null);
+    // padding: 32px 44px 62px;
+    margin-top: 32px;
+    margin-bottom: 62px;
+  }
+}
+
+//--------------------------Modal--------------------------------//
+
+.description-open {
+  width: 40px;
+  height: 40px;
+  // margin-bottom: 41px;
+  fill: var(--accentColor);
+  background-color: var(--white);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  @extend %centered-flex-box;
+  @include buttonHover();
+  &:hover,
+  &:focus {
+    background-color: var(--accentColor);
+    fill: var(--white);
+  }
+
+  // @include desk {
+  //   margin-bottom: 50px;
+  // }
+}
+
+.arrow-right {
+  fill: inherit;
+}
+
+.description-menu {
+  position: absolute;
+  background-color: var(--sectionBgColor);
+  top: 145px;
+  width: 100%;
+  border-radius: 24px;
+  height: 383px;
+  z-index: 1;
+  transition: top 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  .description-container {
+    height: 100%;
+    width: 100%;
+  }
+  @include tab {
+    height: 394px;
+  }
+
+  @include desk {
+    height: 415px;
+  }
+}
+
+.description-menu.is-hidden {
+  top: 100%;
+  transition: 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.container-menu {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include tab {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.description-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 42px;
+  right: 120px;
+  background-color: var(--white);
+  stroke: var(--accentColor);
+  cursor: pointer;
+  @extend %centered-flex-box;
+  @include buttonHover();
+  &:hover,
+  &:focus {
+    background-color: var(--accentColor);
+    stroke: var(--white);
+  }
+
+  @include tab {
+    right: 90px;
+  }
+
+  @include desk {
+    bottom: 51px;
+    right: 146px;
+  }
+}
+
+.description-icon__cross {
+  stroke: inherit;
+}
+
+.description__text {
+  font-weight: bold;
+  @include font(14px, 1.7, center);
+  color: var(--contactFirstColor);
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include tab {
+    @include font(null, 1.8, null);
+    padding: 30px 11px 40px;
+  }
+
+  @include desk {
+    @include font(16px, 1.75, null);
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+}

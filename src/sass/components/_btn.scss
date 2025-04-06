@@ -1,0 +1,5 @@
+.btn {
+  @extend %centered-flex-box;
+  border: none;
+  cursor: pointer;
+}

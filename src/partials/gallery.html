@@ -1,0 +1,28 @@
+<section class="gallery-section">
+  <div class=" container gallery-section__container">
+    <h2 class="gallery-section__title visually-hidden">Gallery</h2>
+    <!-- <h2 class="training">GALLERY WILL BE HERE</h2> -->
+    <picture class="gallery-section__image">
+      <source
+        media="(min-width: 1200px)"
+        type="image/jpg"
+        srcset="./images/gallery/gallery_d_x1.jpg 1x, ./images/gallery/gallery_d_x2.jpg 2x"
+      />
+      <source
+        media="(min-width: 768px)"
+        type="image/jpg"
+        srcset="./images/gallery/gallery_t_x1.jpg 1x, ./images/gallery/gallery_t_x2.jpg 2x"
+      />
+
+      <source
+        type="image/jpg"
+        srcset="./images/gallery/gallery_m_x1.jpg 1x, ./images/gallery/gallery_m_x2.jpg 2x"
+      />
+      <img
+        class="gallery-section__img_basic"
+        src="./images/gallery/gallery_m_x1.jpg"
+        alt="Photo-gallery"
+      />
+    </picture>
+  </div>
+</section>

@@ -1,0 +1,94 @@
+<header id="home" class="site-header">
+  <div class="container site-header__wrap">
+    <a href="./index.html" class="link">
+      <img src="./images/header/logo.png" alt="Логотип компанії" />
+    </a>
+    <nav class="header-nav">
+      <ul class="header-nav__list list">
+        <li class="header-nav__item">
+          <a href="#home" class="header-nav__link link">Home</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#how-its-made" class="header-nav__link link">About us</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#how-its-made" class="header-nav__link link"
+            >How it’s made?</a
+          >
+        </li>
+        <li class="header-nav__item">
+          <a href="#products" class="header-nav__link link">Our products</a>
+        </li>
+        <li class="header-nav__item">
+          <a href="#contacts" class="header-nav__link link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-btns__wrapper">
+      <button
+        type="button"
+        class="burger-menu__btn btn"
+        aria-label="открыть основное меню"
+        data-menu-open
+      >
+        <span class="burger-menu__icon"></span>
+      </button>
+      <button type="button" class="header-btns__btn btn" buynow-modal-open>
+        <span class="header-btns__btn-text">Buy now</span>
+        <img
+          class="header-btns__btn-icon"
+          src="./images/header/arrow-right.svg"
+          alt="иконка стрелочки вправо"
+        />
+      </button>
+    </div>
+  </div>
+
+  <div class="backdrop is-hidden" menu-backdrop>
+    <div class="mobile-menu">
+      <button
+        type="button"
+        class="mobile-menu__close-btn btn"
+        aria-label="закрыть основное меню"
+        data-menu-close
+      >
+        <span class="mobile-menu__close-icon"></span>
+      </button>
+      <div class="mobile-menu__wrap">
+        <button type="button" class="mobile-menu__btn btn" buynow-modal-open1>
+          <span class="mobile-menu__btn-text">Buy now</span>
+          <img
+            class="mobile-menu__btn-icon"
+            src="./images/header/arrow-right.svg"
+            alt="иконка стрелочки вправо"
+          />
+        </button>
+      </div>
+      <ul class="mobile-menu__list list">
+        <li class="mobile-menu__item">
+          <a href="#home" class="mobile-menu__link link" menu-home-link>Home</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#how-its-made" class="mobile-menu__link link" menu-about-link
+            >About us</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#how-its-made" class="mobile-menu__link link" menu-how-link
+            >How it’s made?</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#products" class="mobile-menu__link link" menu-our-link
+            >Our products</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="#contacts" class="mobile-menu__link link" menu-contact-link
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

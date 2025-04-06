@@ -1,0 +1,215 @@
+.about-section {
+  background-color: var(--sectionBgColor);
+  @media screen and(min-width:768px) {
+    padding-top: 130px;
+    padding-bottom: 66px;
+  }
+  @media screen and(min-width:1200px) {
+    padding-top: 125px;
+    padding-bottom: 39px;
+  }
+}
+
+.about-container {
+  padding: 0 20px;
+  @media screen and (max-width: 767px) {
+    padding-top: 125px;
+    padding-bottom: 39px;
+    background-image: url(../images/about/about-milk-mob1x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 100px center;
+  }
+  @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2),
+    screen and (max-width: 767px) and (min-resolution: 192dpi),
+    screen and (max-width: 767px) and (min-resolution: 2dppx) {
+    background-image: url(../images/about/about-milk-mob2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom 100px center;
+  }
+
+  @media screen and(min-width:768px) {
+    padding-left: 39px;
+    padding-right: 36px;
+  }
+
+  @media screen and(min-width:1200px) {
+    background-image: url(../images/about/about-milk-desk1x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom -26px center;
+    padding-left: 72px;
+    padding-right: 77px;
+  }
+  @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+    screen and (min-width: 1200px) and (min-resolution: 192dpi),
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+    background-image: url(../images/about/about-milk-desk2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom -26px center;
+  }
+}
+
+.about {
+  &-text {
+    font-family: Titan One;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.16;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--contactFirstColor);
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 30px;
+      line-height: 1.14;
+      margin-bottom: 15px;
+    }
+  }
+  &-title {
+    font-family: Titan One;
+    font-size: 34px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: var(--accentColor);
+
+    margin: 0 auto;
+    margin-bottom: 26px;
+    @media screen and (max-width: 479px) {
+      width: 90%;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+      line-height: 1.14;
+      margin-bottom: 50px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 58px;
+      line-height: 1.14;
+      margin-bottom: 55px;
+    }
+  }
+}
+
+.about-box {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.about-box_img {
+  min-width: 280px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 46px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 516px;
+  }
+}
+
+.about-box_text {
+  padding: 0 30px;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    max-width: 340px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 45px;
+    max-width: 463px;
+  }
+  &_first {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+    color: var(--contactFirstColor);
+    margin-bottom: 28px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.78;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+  }
+  &_second {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+    color: var(--contactSecondColor);
+    margin-bottom: 19px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.78;
+      margin-bottom: 62px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.92;
+      margin-bottom: 45px;
+    }
+  }
+}
+.about-box_text_second > span {
+  display: block;
+  margin-top: 10px;
+  @media screen and (min-width: 768px) {
+    margin-top: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 27px;
+  }
+}
+
+.about-btn {
+  width: 176px;
+  height: 44px;
+  background: var(--white);
+  border-radius: 22px;
+  border: 0;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  color: var(--accentColor);
+  transition: background-color 250ms var(--cubic);
+  @media screen and(min-width:768px) {
+    font-size: 16px;
+    line-height: 1.31;
+  }
+}
+.about-btn:hover,
+.about-btn:focus {
+  background-color: var(--whiteHover);
+}
+
+.about-btn > img {
+  margin-left: 13px;
+}

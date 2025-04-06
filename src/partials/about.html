@@ -1,0 +1,65 @@
+<section class="about-section" id="how-its-made">
+  <div class="container about-container">
+    <label class="about-text"> Tradition and love </label>
+    <h2 class="about-title">HOW IT'S MADE?</h2>
+    <div class="about-box">
+      <div class="about-box_img">
+        <picture>
+          <source
+            srcset="images/about/about-cow-desk1x.png 1x, images/about/about-cow-desk2x.png 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="images/about/about-cow-tab1x.png 1x, images/about/about-cow-tab2x.png 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="images/about/about-cow-mob1x.png 1x, images/about/about-cow-mob2x.png 2x"
+            media="(min-width: 320px)"
+          />
+          <img src="images/about/about-cow-mob1x.png" alt="" />
+        </picture>
+      </div>
+      <div class="about-box_text">
+        <p class="about-box_text_first">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+          lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+        </p>
+        <p class="about-box_text_second">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci
+          in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna
+          maximus. Cras massa nibh, tincidunt.
+          <span>Aliquam erat volutpat. Aenean accumsan.</span>
+        </p>
+        <button type="button" class="btn about-btn" data-about-open id="off">
+          <span class="">Read more</span>
+          <img class="" src="./images/header/arrow-right.svg" alt="Read more" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- MODAL -->
+<div class="about-backdrop is-hidden modal-anim" data-about>
+  <div class="about-modal">
+    <button type="button" class="about-modal_close" data-about-close id="on">
+      <svg class="modal-close-icon" width="20" height="20px">
+        <use href="./images/sprite.svg#about-icon_close" class="about-icon_close"></use>
+      </svg>
+    </button>
+    <p class="about-modal_title">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ut earum, enim, veniam nesciunt
+      possimus repellat placeat illo maxime sint dignissimos eum accusantium soluta culpa voluptates
+      et quidem necessitatibus rerum laudantium est temporibus tempora deleniti quam ipsum. Laborum,
+      perferendis accusamus architecto voluptates sed aperiam corporis excepturi minus, doloremque,
+      aspernatur hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, ut earum, enim,
+      veniam nesciunt possimus repellat placeat illo maxime sint dignissimos eum accusantium soluta
+      culpa voluptates et quidem necessitatibus rerum laudantium est temporibus tempora deleniti
+      quam ipsum.
+    </p>
+    <!-- <p class="about-modal_title">
+          
+            
+        </p> -->
+  </div>
+</div>

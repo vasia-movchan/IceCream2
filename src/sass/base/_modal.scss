@@ -1,0 +1,543 @@
+/* Бэкдроп и Модалка */
+
+.backdrop-buynow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  opacity: 1;
+  transition: opacity 250ms var(--cubic);
+  z-index: 20;
+  overflow-y: scroll;
+}
+
+.backdrop-buynow.is-hidden-buynow {
+  opacity: 0;
+  pointer-events: none;
+
+  .modal {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  color: var(--accentColor);
+  font-weight: 700;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus .modal-close-btn svg {
+  background-color: var(--whiteHover);
+  fill: var(--accentColor);
+}
+
+.modal-logo {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.modal {
+  padding: 40px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 94%;
+  width: 600px;
+
+  background-color: var(--mainBackground);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-image: url(../images/modal/about-milk-desk2x.png),
+    url(../images/modal/slider-pic5-dt@2x.png);
+  background-repeat: no-repeat;
+  background-position: center, left 60px bottom 60px;
+  background-size: contain, auto;
+
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+  @media screen and (max-width: 767px) {
+    padding: 20px;
+  }
+}
+
+.btn-buynow {
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 160px;
+  padding: 0 30px;
+  background-color: var(--whiteElements);
+  color: var(--accentColor);
+  border-radius: 22px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--whiteHover);
+  }
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 1.7;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--accentColor);
+    margin-top: 35px;
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    // width: calc((100%) * 0.9);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @media screen and (min-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+      // width: calc((100% - 20px) * 0.35);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    fill: var(--accentColor);
+    left: 50px;
+    @media screen and (min-width: 480px) {
+      display: inline-block;
+      top: 55%;
+      left: 12px;
+    }
+  }
+}
+
+.form__input {
+  margin: 0;
+  height: 40px;
+  padding: 6px 10px 6px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  max-width: calc((100%) * 0.8);
+
+  transition: border-color 250ms var(--cubic);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accentHover);
+    cursor: pointer;
+    border-width: 3px;
+  }
+
+  &:hover + .form__icon,
+  &:focus + .form__icon {
+    fill: var(--accentHover);
+  }
+}
+
+.form__field label {
+  width: 40px;
+  margin-bottom: 4px;
+  font-family: Titan One;
+  font-size: 10px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--accentColor);
+  text-transform: uppercase;
+}
+
+// New corrections / //
+
+.products-title {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-to-choose__label {
+  font-size: 10px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--accentColor);
+  font-family: Titan One;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.products-to-choose {
+  overflow: auto;
+  height: calc(100vh / 3);
+  margin-bottom: 20px;
+
+  // display: flex;
+  // justify-content: flex-start;
+}
+
+.products-to-choose-in {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.products-to-choose__select {
+  font-size: 10px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+
+  font-family: var(--mainFont);
+  color: var(--contactSecondColor);
+  font-weight: bold;
+
+  margin: 0;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  text-align: center;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accentHover);
+    cursor: pointer;
+    border-width: 3px;
+  }
+}
+
+.products-to-choose__group {
+  text-align: left;
+}
+
+.products-to-choose__item {
+  font-style: italic;
+  text-align: left;
+}
+
+.price-thumb {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+
+  font-size: 10px;
+  padding-top: 9px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+    padding-top: 7px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // font-size: 16px;
+  }
+
+  font-family: var(--mainFont);
+  color: var(--contactSecondColor);
+  font-weight: bold;
+  text-align: center;
+}
+
+.amount-thumb {
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+
+  font-size: 10px;
+  padding-top: 9px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+    padding-top: 7px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+
+  font-family: var(--mainFont);
+  color: var(--contactSecondColor);
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-add-btn {
+  width: 100px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: var(--white);
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+
+  color: green;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--whiteHover);
+  }
+}
+
+.modal-delete-btn {
+  width: 40px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-color: var(--white);
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 22px;
+
+  color: var(--accentColor);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--whiteHover);
+  }
+}
+
+.btn-thumb {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.buynow-contacts-details {
+  margin: 0;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.total-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  // width: calc(((100% - 60px) * 0.9) + 45px);
+  width: 100%;
+  min-width: 60px;
+  @media screen and (max-width: 767px) {
+    justify-content: flex-end;
+  }
+}
+
+.total-amount-thumb {
+  height: 40px;
+  width: calc(100vw * 0.12);
+  min-width: 60px;
+  max-width: 80px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: white;
+
+  font-size: 10px;
+  padding-top: 9px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 12px;
+    padding-top: 7px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+
+  font-family: var(--mainFont);
+  color: var(--contactSecondColor);
+  font-weight: bold;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accentHover);
+    cursor: pointer;
+    border-width: 3px;
+  }
+}
+
+.div-item-thumb1 {
+  width: calc((100% - 60px) * 0.5);
+
+  margin-right: 5px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 15px;
+  }
+
+  display: flex;
+}
+
+.div-item-thumb2 {
+  min-width: 40px;
+  width: calc((100% - 60px) * 0.15);
+  margin-right: 5px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--accentHover);
+    cursor: pointer;
+    border-width: 3px;
+  }
+}
+
+.div-item-thumb3 {
+  width: calc((100% - 60px) * 0.1);
+  margin-right: 5px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 15px;
+  }
+}
+
+.div-item-thumb4 {
+  min-width: 40px;
+  width: calc(100vw * 0.12);
+  max-width: 80px;
+  margin-right: 5px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: var(--accentHover);
+    cursor: pointer;
+    border-width: 3px;
+  }
+}
+
+.div-item-thumb5 {
+  min-width: 40px;
+  width: calc((100% - 60px) * 0.1);
+}
+
+.products-to-choose__label-total-amount {
+  margin-right: 15px;
+}

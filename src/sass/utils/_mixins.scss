@@ -1,0 +1,56 @@
+@mixin tel {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desk {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin animationBottom {
+  animation-name: slideFromBottom;
+  @extend %animationSetup;
+}
+
+@mixin animationLeft {
+  animation-name: slideFromLeft;
+  @extend %animationSetup;
+}
+
+@mixin animationRight {
+  animation-name: slideFromRight;
+  @extend %animationSetup;
+}
+
+@mixin buttonHover {
+  transition: background-color 250ms var(--cubic);
+}
+
+@mixin font($fs, $lh, $ta) {
+  font-size: $fs;
+  line-height: $lh;
+  text-align: $ta;
+}
+
+@mixin fonpic($br, $bs, $bp, $pst, $dsp, $zi) {
+  background-repeat: $br;
+  background-size: $bs;
+  background-position: $bp;
+  position: $pst;
+  display: $dsp;
+  z-index: $zi;
+}
+
+@mixin fonpicsz($wdth, $hgth) {
+  width: $wdth;
+  height: $hgth;
+}
